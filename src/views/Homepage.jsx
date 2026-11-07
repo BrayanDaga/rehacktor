@@ -12,7 +12,7 @@ export default function Homepage() {
       <GameList>
         {games.map((game) => {
           return (
-            <GameList.Card key={game.id} game={game} />
+            <GameList.Card key={game.dealID} game={game} />
           )
         })}
       </GameList>
