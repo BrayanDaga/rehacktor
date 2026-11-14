@@ -1,15 +1,16 @@
-import { useLoaderData } from "react-router"
-import GameList from "../components/Gamelist";
+import { useLoaderData, useParams } from "react-router"
+import GameList from "../components/Gamelist";  
 
 export default function SearchPage() {
   const games = useLoaderData();
-  console.log(games);
+  const {slug} = useParams();
 
   return (
     <>
+    <h1 className="text-center text-3xl mt-10">Search by slug: {slug} </h1>
       <GameList>
         {games.map((game) => {
-          return <GameList.Card key={game.gameID} game={game} />
+          return <GameList.Card key={game.id} game={game} />
         })}
       </GameList>
     </>
