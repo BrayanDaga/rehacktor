@@ -1,14 +1,18 @@
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router";
-import { supabase } from "../database/supabase";
+import supabase from "../database/supabase";
+import { useContext } from "react";
+import { UserContext } from "../context/UserContext";
 
 export default function Registerage() {
   const navigate = useNavigate();
 
   const { register, handleSubmit, formState: { errors } } = useForm();
 
+  const { signUp } = useContext(UserContext);
+
   const onSubmit = async (user_data) => {
-    let { data, error } = await supabase.auth.signUp({
+    await signUp({
       email: user_data.email,
       password: user_data.password,
       options: {
