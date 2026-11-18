@@ -34,7 +34,8 @@ export default function UserContextProvider({ children }) {
   }
 
   const signUp = async (newUser) => {
-    await supabase.auth.signUp(newUser);
+    const { error } = await supabase.auth.signUp(newUser);
+    if (error) throw error;
     await getUser();
   }
 

@@ -17,8 +17,8 @@ export default function LoginPage() {
 
   const onSubmit = async (user_data) => {
     await login({
-      email: user_data_email,
-      password: user_data_password
+      email: user_data.email,
+      password: user_data.password
     });
     navigate('/');
   }

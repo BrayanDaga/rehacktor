@@ -1,6 +1,5 @@
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router";
-import supabase from "../database/supabase";
 import { useContext } from "react";
 import { UserContext } from "../context/UserContext";
 
