@@ -7,6 +7,7 @@ import SearchPage from "../views/SearchPage";
 import GenrePage from "../views/GenrePage";
 import AuthenticationLayout from "../components/layouts/AuthenticationLayout";
 import Registerage from "../views/RegisterPage";
+import LoginPage from "../views/LoginPage";
 
 const router = createBrowserRouter([
   {
@@ -38,6 +39,10 @@ const router = createBrowserRouter([
       {
         path: routes.register,
         Component: Registerage
+      },
+      {
+        path: routes.login,
+        Component: LoginPage
       }
     ]
   }

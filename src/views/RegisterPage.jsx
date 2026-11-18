@@ -7,7 +7,11 @@ import { UserContext } from "../context/UserContext";
 export default function Registerage() {
   const navigate = useNavigate();
 
-  const { register, handleSubmit, formState: { errors } } = useForm();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
 
   const { signUp } = useContext(UserContext);
 
