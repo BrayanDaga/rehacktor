@@ -3,7 +3,8 @@ const routes = {
   search: '/search/:slug',
   genre: '/genre/:slug',
   register: '/auth/register',
-  login: '/auth/login'
+  login: '/auth/login',
+  profile: '/auht/profile'
 }
 
 export default routes;
