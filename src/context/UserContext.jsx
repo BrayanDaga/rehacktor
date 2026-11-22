@@ -18,6 +18,7 @@ export default function UserContextProvider({ children }) {
         .eq('id', user.id);
 
       setProfile(profiles[0]);
+
     }
   }
 
