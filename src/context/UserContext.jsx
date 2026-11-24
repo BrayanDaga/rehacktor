@@ -45,8 +45,14 @@ export default function UserContextProvider({ children }) {
     await getUser();
   }
 
+  const updateProfile = async (newProfile) => {
+    const { data, error } = await supabase.from('pofiles').update(newProfile).eq('id', user.id).select()
+
+    await getUser();
+  }
+
   return (
-    <UserContext.Provider value={{ user, profile, signOut, signUp, login, getUser }} >
+    <UserContext.Provider value={{ user, profile, signOut, signUp, login, getUser, updateProfile }} >
       {children}
     </UserContext.Provider >
   )
