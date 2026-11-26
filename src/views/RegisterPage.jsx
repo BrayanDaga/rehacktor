@@ -32,7 +32,7 @@ export default function Registerage() {
   return (
     <>
       <main className="h-screen flex justify-center items-center">
-        <form onSubmit={handleSubmit(onSubmit)}>
+        <form onSubmit={handleSubmit(onSubmit)} className="p-10 bg-nav-gray w-1/2 ">
           <input type="text" placeholder="Name" className="input input-lg mb-5 w-full"
             {...register('first_name', { required: 'This field is required' })}
           />
