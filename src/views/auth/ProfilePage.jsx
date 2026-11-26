@@ -26,14 +26,14 @@ export default function ProfilePage() {
       {user && profile && (
         <>
           <article className="mt-10 flex flex-col items-center">
-            <img src={avatarUrl ?? "https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"} alt="Profile image" className="w-25 h-25 rounded-full" />
+            <img src={avatarUrl ?? "https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"} alt="Profile image" className="w-25 h-25 aspect-square shrink-0 rounded-full object-cover" />
 
             <h2 className="text-2xl font-bold mt-5">
               {profile.first_name}
             </h2>
           </article>
-          <section className="grid grid-cols-3 gap-4 px-36">
-            <article className="bg-black text-nav-gray rounded-box p-10">
+          <section className="grid grid-cols-1 justify-items-center gap-4 px-4 sm:px-6 md:px-12 lg:px-36">
+            <article className="w-full md:w-1/3 bg-black text-nav-gray rounded-box p-6 sm:p-10">
               <h3 className="font-bold">Your data</h3>
               <p>Name: {profile.first_name}</p>
               <p>Email: {user.email}</p>
